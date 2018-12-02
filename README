@@ -1,0 +1,41 @@
+WHat does this do?
+
+The script allows you to access your whitelisted Google MyBusiness API through python
+
+Prerequisites:
+
+Your project must be whitelisted by Google for Google MyBusiness API access. Note that although you're able to grant API access to any of your existing and new projects after one project of yours gets whitelisted, it doesnt work like that. You cant use it for any other project.
+
+Once you're ready, visit the Google API Console: https://console.cloud.google.com/apis/dashboard
+In case you have multiple Google accounts, choose the appropriate acccount, whose project got whitelisted.
+Now, choose your whitelisted project from the dropdown.
+Choose Credentials from the left side menu
+Create Credentials > OAuth client ID > Application type: Other > Create
+Click Ok on the popup which shows your client ID and secret.
+Click on the name of the Client ID  you just created.
+Click on Download JSON.
+Rename the file from client_secret_000x-000y.apps.googleusercontent.com.json to client_secrets.json
+
+Now run the script like this:
+
+python3 gmb.py --noauth_local_webserver
+
+The first time you run it, and when your Credentials have expired, you will get the following prompt:
+
+    Go to the following link in your browser:
+
+        https://accounts.google.com/o/oauth2/auth?client_id=00x-00y.apps.googleusercontent.com&redirect_uri=urn%XYZ%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.business.manage&access_type=offline&response_type=code&approval_prompt=force
+
+Open a web browser, paste and visit that url. Now, choose the correct google account and authorize it by entering the verification code as prompted by the app:
+
+    Enter verification code: 4/abv-xyz
+
+If successful, you'll get your account information on the console.
+
+You can get a list of available API calls here: https://developers.google.com/my-business/reference/rest/
+
+Other useful links:
+API console dashboard: https://console.cloud.google.com/apis/dashboard
+OAuth playground for testing access: https://developers.google.com/oauthplayground
+Information about using OAuth playground: https://developers.google.com/my-business/content/basic-setup {Scroll down to "Make a simple HTTP request
+"}
