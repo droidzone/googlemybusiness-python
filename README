@@ -9,19 +9,19 @@ The script allows you to access your whitelisted Google MyBusiness API through p
 Your project must be whitelisted by Google for Google MyBusiness API access. Note that although you're able to grant API access to any of your existing and new projects after one project of yours gets whitelisted, it doesnt work like that. You cant use it for any other project.
 
 Once you're ready, 
-l. Visit the Google API Console: https://console.cloud.google.com/apis/dashboard
-l. In case you have multiple Google accounts, choose the appropriate acccount, whose project got whitelisted.
-Now, choose your whitelisted project from the dropdown.
-Choose Credentials from the left side menu
-Create Credentials > OAuth client ID > Application type: Other > Create
-Click Ok on the popup which shows your client ID and secret.
-Click on the name of the Client ID  you just created.
-Click on Download JSON.
-Rename the file from client_secret_000x-000y.apps.googleusercontent.com.json to client_secrets.json
+1. Visit the Google API Console: https://console.cloud.google.com/apis/dashboard
+2. In case you have multiple Google accounts, choose the appropriate acccount, whose project got whitelisted.
+3. Now, choose your whitelisted project from the dropdown.
+4. Choose Credentials from the left side menu
+5. Create Credentials > OAuth client ID > Application type: Other > Create
+6. Click Ok on the popup which shows your client ID and secret.
+7. Click on the name of the Client ID  you just created.
+8. Click on Download JSON.
+9. Rename the file from client_secret_000x-000y.apps.googleusercontent.com.json to client_secrets.json
 
 Now run the script like this:
 
-python3 gmb.py --noauth_local_webserver
+    python3 gmb.py --noauth_local_webserver
 
 The first time you run it, and when your Credentials have expired, you will get the following prompt:
 
@@ -40,5 +40,5 @@ You can get a list of available API calls here: https://developers.google.com/my
 Other useful links:
 API console dashboard: https://console.cloud.google.com/apis/dashboard
 OAuth playground for testing access: https://developers.google.com/oauthplayground
-Information about using OAuth playground: https://developers.google.com/my-business/content/basic-setup {Scroll down to "Make a simple HTTP request
-"}
+Information about using OAuth playground: https://developers.google.com/my-business/content/basic-setup (Scroll down to "Make a simple HTTP request
+")
