@@ -1,13 +1,16 @@
-WHat does this do?
+#Google MyBusiness API on Python 
+
+## What does this do?
 
 The script allows you to access your whitelisted Google MyBusiness API through python
 
-Prerequisites:
+## Prerequisites:
 
 Your project must be whitelisted by Google for Google MyBusiness API access. Note that although you're able to grant API access to any of your existing and new projects after one project of yours gets whitelisted, it doesnt work like that. You cant use it for any other project.
 
-Once you're ready, visit the Google API Console: https://console.cloud.google.com/apis/dashboard
-In case you have multiple Google accounts, choose the appropriate acccount, whose project got whitelisted.
+Once you're ready, 
+l. Visit the Google API Console: https://console.cloud.google.com/apis/dashboard
+l. In case you have multiple Google accounts, choose the appropriate acccount, whose project got whitelisted.
 Now, choose your whitelisted project from the dropdown.
 Choose Credentials from the left side menu
 Create Credentials > OAuth client ID > Application type: Other > Create
