@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(parents=[tools.argparser])
 flags = parser.parse_args()
 flow = flow_from_clientsecrets('client_secrets.json',
     scope='https://www.googleapis.com/auth/plus.business.manage',
-    redirect_uri='https://myopip.com')
+    redirect_uri='https://mydomain.com')
 
 # For retrieving the refresh token
 flow.params['access_type'] = 'offline'
